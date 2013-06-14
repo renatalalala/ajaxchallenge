@@ -6,9 +6,7 @@ $(document).ready(function(){
       type: 'post',
       dataType: "json"
     }).done(function (response){
-      console.log(response);
+      $('#color_me :nth-child(' + response.cell + ')').css('background-color', response.color);
     });
-
-
   });
 });
